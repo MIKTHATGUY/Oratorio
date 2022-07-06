@@ -1,10 +1,10 @@
 from tkinter import *
 import cv2, json, datetime
-import string
+import sys
+import string, requests, tkinter
+
+
 ALPHA = string.ascii_letters
-
-
-
 
 
 oggi = datetime.datetime.now().strftime("%d/%m/%Y")
@@ -12,6 +12,15 @@ oggi = datetime.datetime.now().strftime("%d/%m/%Y")
 
 print(oggi)
 
+
+
+a = datetime.datetime.strptime(oggi, "%d/%m/%Y")
+b = datetime.datetime.strptime("12/07/2022", "%d/%m/%Y")
+
+
+if a > b:
+        print("ciao")
+        sys.exit()
 
 
 def refresh(val):
